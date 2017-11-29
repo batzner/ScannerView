@@ -1,5 +1,5 @@
 # ScannerView
-Customizable Android View for Scanning QR Codes like for WhatsApp Web
+Customizable Android View for Scanning QR Codes (or anything else) like for WhatsApp Web
 
 <img src="https://media.giphy.com/media/3o6fJ3jykjcDnWYFIk/giphy.gif"/>
 
