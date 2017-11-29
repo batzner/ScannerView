@@ -52,9 +52,9 @@ public class ScannerView extends View {
         // Calculate the pixel-lengths of default values
         Resources r = context.getResources();
         float defaultMovingLineWidth = TypedValue
-                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, r.getDisplayMetrics());
+                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, r.getDisplayMetrics());
         float defaultFrameLineWidth = TypedValue
-                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3, r.getDisplayMetrics());
+                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, r.getDisplayMetrics());
         float defaultOrthogonalFrameLineLength = TypedValue
                 .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 48, r.getDisplayMetrics());
 
@@ -78,7 +78,7 @@ public class ScannerView extends View {
             mFrameColor = a.getColor(R.styleable.ScannerView_frameColor,
                     Color.argb(150, 200, 200, 200));
             mMovingLineColor = a.getColor(R.styleable.ScannerView_movingLineColor,
-                    Color.argb(200, 0, 255, 0));
+                    Color.argb(150, 0, 255, 0));
             mPaddingColor = a.getColor(R.styleable.ScannerView_paddingColor,
                     Color.argb(100, 150, 150, 150));
             mUpAndDownSeconds = a.getFloat(R.styleable.ScannerView_upAndDownSeconds, 3.5f);
@@ -192,13 +192,14 @@ public class ScannerView extends View {
 
         // Draw the moving line
         if (mAnimated) {
-            float relativeY = mMovingLineProgress * mFrameHeight;
+            float lineAreaHeight = mFrameHeight - mFrameLineWidth;
+            float relativeY = mMovingLineProgress * lineAreaHeight;
             if (!mLineMovingDown) {
-                relativeY = mFrameHeight - relativeY;
+                relativeY = lineAreaHeight - relativeY;
             }
-            float lineY = mPaddingHeight + relativeY;
-            canvas.drawLine(mPaddingWidth, lineY, mPaddingWidth + mFrameWidth, lineY,
-                    mMovingLinePaint);
+            float lineY = mPaddingHeight + mFrameLineWidth + relativeY;
+            canvas.drawLine(mPaddingWidth + mFrameLineWidth / 2, lineY,
+                    mPaddingWidth + mFrameWidth - mFrameLineWidth / 2, lineY, mMovingLinePaint);
         }
     }
 
