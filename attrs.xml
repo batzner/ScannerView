@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScannerView">
+        <attr name="frameWidthPercentage" format="float" />
+        <attr name="frameHeightPercentage" format="float" />
+        <attr name="frameAspectRatio" format="float" />
+        <attr name="movingLineWidth" format="dimension" />
+        <attr name="frameLineWidth" format="dimension" />
+        <attr name="orthogonalFrameLineLength" format="dimension" />
+        <attr name="paddingColor" format="color" />
+        <attr name="movingLineColor" format="color" />
+        <attr name="frameColor" format="color" />
+        <attr name="upAndDownSeconds" format="float" />
+    </declare-styleable>
+</resources>
