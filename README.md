@@ -5,6 +5,8 @@ Customizable Android View for Scanning QR Codes (or anything else) like for What
 
 This only adds the graphical overlays to the UI as seen above! The view does not do any scanning or display of the camera input.
 
+**Showcase App**: [Wifi Key Scanner](https://play.google.com/store/apps/details?id=com.kilianbatzner.wifikeyscanner)
+
 ## Usage
 
 1. Copy `ScannerView.java` into your project.
