@@ -1,9 +1,7 @@
 # ScannerView
 Customizable Android View for Scanning QR Codes (or anything else) like for WhatsApp Web.
 
-<img src="https://media.giphy.com/media/3o6fJ3jykjcDnWYFIk/giphy.gif"/>
-
-This only adds the graphical overlays to the UI as seen above! The view does not do any scanning or display of the camera input.
+This only adds the graphical overlays to the UI! The view does not do any scanning or display of the camera input.
 
 **Showcase App**: [Wifi Key Scanner](https://play.google.com/store/apps/details?id=com.kilianbatzner.wifikeyscanner)
 
